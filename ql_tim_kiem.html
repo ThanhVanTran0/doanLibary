@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Quản lý thư viện</title>
+    <title>Quản lý thư viện - Tìm kiếm</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -59,10 +59,10 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active">
+                    <li>
                         <a href="quan_ly.html"><i class="fa fa-fw fa-info-circle"></i> Thông tin</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="charts.html"><i class="fa fa-fw fa-search"></i> Tìm Kiếm</a>
                     </li>
                     <li>
@@ -107,82 +107,80 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Thông tin
+                            Tìm Kiếm Sách
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="#">Quản lý</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-edit"></i> Thông tin
+                                <i class="fa fa-edit"></i> Tìm kiếm
                             </li>
                         </ol>
                     </div>
                 </div>
                 <!-- /.row -->
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-horizontal" action="" method="get" accept-charset="utf-8">
+                            <div class="col-md-5">
+                                <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                            </div>
+                            <div class="col-md-5">
+                                <select name="" class="form-control">
+                                    <option value="" selected="true">Tên sách</option>
+                                    <option value="">Thể loại</option>
+                                    <option value="">Tác giả</option>
+                                    <option value="">Nhà xuất bản</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-primary">Tìm kiếm</button>
+                            </div>
+                        </form>          
+                    </div>
+              
+                </div>
+                <!-- /. Row thanh tìm kiếm-->
+
+                <hr>
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <form action="quan_ly_submit" method="get" accept-charset="utf-8">
-                            <div class="row">
-                                <div class="cotTrai col-md-7">
-                                    <div class="form-group">
-                                        <label>Họ và tên</label>
-                                        <input class="form-control" placeholder='Trần Văn Thanh' disabled="">
-                                    </div> 
-
-                                    <div class="form-group">
-                                        <label>Số điện thoại</label>
-                                        <input class="form-control" placeholder='123456789' disabled="">
-                                    </div> 
-
-                                    <div class="form-group">
-                                        <label>Ngày sinh</label>
-                                         <input type="date" name="" id="" class="form-control" value="" required="required" title="">
-                                    </div> 
-
-                                    <div class="form-group">
-                                        <label>Giới tính</label>
-                                        <select name="" id="input" class="form-control" required="required" disabled="">
-                                            <option value="Nam" selected="true">Nam</option>
-                                            <option value="Nu">Nữ</option>
-                                        </select>
-                                    </div> 
-
-                                </div>
-                                <!-- Cột thông tin -->
-
-                                <div class="cotPhai col-md-5 col-md-push-1">
-                                    <img src="images/templatemo_image_04.jpg" alt="Avatar">
-                                    <button type="button" class="btn btn-default">Chọn hình</button>
-                                </div>
-                                <!-- End cột chứa hình -->
-                            </div>
-
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <div class="form-group">
-                                            <label>Địa chỉ</label>
-                                            <input class="form-control" placeholder='Thành phố Hồ Chí Minh' disabled="">
-                                    </div>
-
-                                     <div class="form-group">
-                                            <label>Email</label>
-                                            <input class="form-control" placeholder='123456@example.com' disabled="">
-                                    </div> 
-
-                                     <div class="form-group">
-                                            <button type="button" class="btn btn-primary center-block">Chỉnh sửa thông tin</button>
-                                    </div>    
-                                </div>
-                                   
-                            </div>
-                            <!-- /.Row 2 -->
-                        </form>
-                        <!-- /. Form -->
+                        <h3>Kết quả tìm kiếm</h3>
                     </div>
                 </div>
-                <!-- /.row -->
+                <!-- Head kq tim -->
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th id='stt'>STT</th>
+                                        <th id='tensach'>Tên Sách</th>
+                                        <th id="theloai">Thể Loại</th>
+                                        <th id="tacgia">Tác Giả</th>
+                                        <th id="nxb">NXB</th>
+                                        <th id="tinhtrang">Tình trạng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>    
+                    </div>    
+                </div>
+                <!-- Bang kết quả tìm kiếm -->
+
             </div>
             <!-- /.container-fluid -->
 
@@ -202,6 +200,11 @@
     <script src="js/plugins/morris/raphael.min.js"></script>
     <script src="js/plugins/morris/morris.min.js"></script>
     <script src="js/plugins/morris/morris-data.js"></script>
+    <script>
+        $("#stt").width(10);
+        $("#theloai").width(90);
+        $("#tinhtrang").width(80);
+    </script>
 
 </body>
 
